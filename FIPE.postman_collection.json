@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "230ea0ec-b298-48a4-9559-3332a25ff454",
+		"name": "FIPE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6344001"
+	},
+	"item": [
+		{
+			"name": "HEALTH",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dragon/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dragon",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/dragon/teste",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dragon/brands",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dragon",
+						"brands"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

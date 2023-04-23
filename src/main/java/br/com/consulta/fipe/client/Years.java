@@ -2,18 +2,18 @@ package br.com.consulta.fipe.client;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Models {
+public class Years {
 
     @JsonProperty("codigo")
-    private Integer codigo;
+    private String codigo;
     @JsonProperty("nome")
     private String nome;
 
-    public Integer getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Integer codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 

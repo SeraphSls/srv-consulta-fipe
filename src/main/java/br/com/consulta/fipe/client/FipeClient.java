@@ -5,6 +5,7 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import java.util.List;
 
 
@@ -16,11 +17,11 @@ public interface FipeClient {
     List<Brands> getAllBrands();
 
     @GET
-    @Path("/carros/marcas/59/modelos")
-    List<Object> getAllModels();
+    @Path("carros/marcas/{idFrabricante}/modelos")
+    Vehicle getAllVehicle(@PathParam("idFrabricante") Integer id);
 
     @GET
     @Path("/carros/marcas/59/modelos/5940/anos")
-    List<ObjectsJson> getAllModelYears();
+    Vehicle getAllVeiYears();
 
 }

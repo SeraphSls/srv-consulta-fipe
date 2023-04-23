@@ -14,14 +14,14 @@ public interface FipeClient {
 
     @GET
     @Path("/carros/marcas")
-    List<Brands> getAllBrands();
+    List<Models> getAllBrands();
 
     @GET
-    @Path("carros/marcas/{idFrabricante}/modelos")
-    Vehicle getAllVehicle(@PathParam("idFrabricante") Integer id);
+    @Path("carros/marcas/{idFabricante}/modelos")
+    Vehicle getAllVehicle(@PathParam("idFabricante") Integer id);
 
     @GET
-    @Path("/carros/marcas/59/modelos/5940/anos")
-    Vehicle getAllVeiYears();
+    @Path("carros/marcas/{idFabricante}/modelos/{idModelo}/anos")
+    List<Years> getAllVeiYears(@PathParam("idFabricante") Integer idFabricante, @PathParam("idModelo") Integer idModelo);
 
 }

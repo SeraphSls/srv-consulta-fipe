@@ -30,4 +30,10 @@ public class FipeController extends AbstractController {
         return Response.ok(client.getAllVehicle(id)).build();
     }
 
+    @GET
+    @Path("allModelsYears/{idFabricante}/{idModelo}")
+    public Response listAllModelsYears(@PathParam("idFabricante") Integer idFabricante, @PathParam("idModelo") Integer idModelo) {
+        return Response.ok(client.getAllVeiYears(idFabricante, idModelo)).build();
+    }
+
 }

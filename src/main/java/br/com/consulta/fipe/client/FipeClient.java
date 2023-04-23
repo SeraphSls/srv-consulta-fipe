@@ -15,6 +15,12 @@ public interface FipeClient {
     @Path("/carros/marcas")
     List<Brands> getAllBrands();
 
+    @GET
+    @Path("/carros/marcas/59/modelos")
+    List<Object> getAllModels();
 
+    @GET
+    @Path("/carros/marcas/59/modelos/5940/anos")
+    List<ObjectsJson> getAllModelYears();
 
 }

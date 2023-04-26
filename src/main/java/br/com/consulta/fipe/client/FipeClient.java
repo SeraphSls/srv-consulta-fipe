@@ -22,6 +22,6 @@ public interface FipeClient {
 
     @GET
     @Path("carros/marcas/{idFabricante}/modelos/{idModelo}/anos")
-    List<Years> getAllVeiYears(@PathParam("idFabricante") Integer idFabricante, @PathParam("idModelo") Integer idModelo);
+    List<Years> getAllVehiclesYears(@PathParam("idFabricante") Integer idFabricante, @PathParam("idModelo") Integer idModelo);
 
 }

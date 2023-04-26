@@ -17,6 +17,7 @@ public class FipeController extends AbstractController {
     @RestClient
     FipeClient client;
 
+    //Lista todas as marcas
     @GET
     public Response listBrands() {
         return Response.ok(
@@ -24,16 +25,20 @@ public class FipeController extends AbstractController {
         ).build();
     }
 
+
+    //traz todos os modelos de carros de uma fabricante especifica
     @GET
     @Path("allModels/{idFabricante}")
     public Response listAllModels(@PathParam("idFabricante") Integer id) {
         return Response.ok(client.getAllVehicle(id)).build();
     }
 
+
+    //traz os dados de um modelo de fabricante especifica
     @GET
     @Path("allModelsYears/{idFabricante}/{idModelo}")
     public Response listAllModelsYears(@PathParam("idFabricante") Integer idFabricante, @PathParam("idModelo") Integer idModelo) {
-        return Response.ok(client.getAllVeiYears(idFabricante, idModelo)).build();
+        return Response.ok(client.getAllVehiclesYears(idFabricante, idModelo)).build();
     }
 
 }
